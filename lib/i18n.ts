@@ -61,6 +61,11 @@ export const translations = {
     
     // Sunday special
     noDinner: "No dinner on Sundays! 🌙 Enjoy your evening.",
+    
+    // Future recipes
+    viewFuture: "14-Day Plan",
+    upcomingMeals: "Upcoming Meals",
+    allDays: "All 14 Days",
   },
   hi: {
     // Header
@@ -122,6 +127,11 @@ export const translations = {
     
     // Sunday special
     noDinner: "रविवार को रात का खाना नहीं! 🌙 शाम का मज़ा लें।",
+    
+    // Future recipes
+    viewFuture: "14-दिन का प्लान",
+    upcomingMeals: "आने वाले खाने",
+    allDays: "सभी 14 दिन",
   }
 };
 

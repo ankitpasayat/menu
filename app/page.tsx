@@ -22,6 +22,7 @@ export default function Home() {
   const [istTime, setIstTime] = useState('');
   const [dayIndex, setDayIndex] = useState(0);
   const [showAllMeals, setShowAllMeals] = useState(false);
+  const [showFuturePlan, setShowFuturePlan] = useState(false);
   const [cookTime, setCookTime] = useState({ time: '7:00 AM', isSunday: false });
   
   // Settings
@@ -136,6 +137,16 @@ export default function Home() {
             </div>
           </div>
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowFuturePlan(!showFuturePlan)}
+              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                showFuturePlan 
+                  ? 'bg-purple-500 text-white' 
+                  : 'bg-purple-100 dark:bg-purple-900 hover:bg-purple-200 dark:hover:bg-purple-800 text-purple-700 dark:text-purple-300'
+              }`}
+            >
+              📅 {t(locale, 'viewFuture')}
+            </button>
             <button 
               onClick={() => setShowAllMeals(!showAllMeals)}
               className="px-3 py-1.5 bg-green-100 dark:bg-green-900 hover:bg-green-200 dark:hover:bg-green-800 rounded-full text-sm font-medium text-green-700 dark:text-green-300 transition-colors"
@@ -253,7 +264,16 @@ export default function Home() {
           </div>
         )}
 
-        {!showAllMeals && currentRecipe && (
+        {showFuturePlan && (
+          <FuturePlanView 
+            recipes={recipes} 
+            currentDayIndex={dayIndex} 
+            locale={locale} 
+            openYouTube={openYouTube}
+          />
+        )}
+
+        {!showFuturePlan && !showAllMeals && currentRecipe && (
           <>
             {/* Current Meal Card */}
             <RecipeCard 
@@ -301,7 +321,7 @@ export default function Home() {
           </>
         )}
 
-        {showAllMeals && (
+        {!showFuturePlan && showAllMeals && (
           <>
             <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
               {t(locale, 'todayMenu')}
@@ -362,6 +382,160 @@ export default function Home() {
         )}
       </div>
     </main>
+  );
+}
+
+// Future Plan View Component - Shows all 14 days at a glance
+function FuturePlanView({ 
+  recipes, 
+  currentDayIndex, 
+  locale, 
+  openYouTube 
+}: { 
+  recipes: DayMenu[]; 
+  currentDayIndex: number; 
+  locale: Locale; 
+  openYouTube: (youtubeId: string) => void;
+}) {
+  const dayNames = locale === 'hi' 
+    ? ['सोमवार', 'मंगलवार', 'बुधवार', 'गुरुवार', 'शुक्रवार', 'शनिवार', 'रविवार']
+    : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+  return (
+    <div className="space-y-4">
+      <h2 className="text-xl font-bold text-gray-800 dark:text-white flex items-center gap-2">
+        📅 {t(locale, 'allDays')}
+      </h2>
+      
+      <div className="space-y-3">
+        {recipes.map((dayMenu, idx) => {
+          const isToday = idx === currentDayIndex;
+          const dayOfWeek = idx % 7;
+          const weekNum = Math.floor(idx / 7) + 1;
+          const isSunday = dayOfWeek === 6;
+          const totalProtein = dayMenu.breakfast.protein + dayMenu.lunch.protein + (dayMenu.dinner?.protein || 0);
+          const totalCalories = dayMenu.breakfast.calories + dayMenu.lunch.calories + (dayMenu.dinner?.calories || 0);
+          
+          return (
+            <div 
+              key={idx}
+              className={`
+                rounded-2xl overflow-hidden transition-all
+                ${isToday 
+                  ? 'ring-2 ring-green-500 bg-green-50 dark:bg-green-900/30' 
+                  : 'bg-white dark:bg-gray-800'
+                }
+              `}
+            >
+              {/* Day Header */}
+              <div className={`
+                px-4 py-2 flex items-center justify-between
+                ${isToday 
+                  ? 'bg-green-500 text-white' 
+                  : isSunday 
+                    ? 'bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200'
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200'
+                }
+              `}>
+                <div className="flex items-center gap-2">
+                  <span className="font-bold">
+                    {locale === 'hi' ? `दिन ${idx + 1}` : `Day ${idx + 1}`}
+                  </span>
+                  <span className="text-sm opacity-80">
+                    ({dayNames[dayOfWeek]} • W{weekNum})
+                  </span>
+                  {isToday && (
+                    <span className="bg-white/20 px-2 py-0.5 rounded-full text-xs font-medium">
+                      {locale === 'hi' ? 'आज' : 'Today'}
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <span>💪 {totalProtein}g</span>
+                  <span>🔥 {totalCalories}</span>
+                </div>
+              </div>
+
+              {/* Meals Grid */}
+              <div className="p-3 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                {/* Breakfast */}
+                <MiniMealCard 
+                  emoji="🌅"
+                  label={locale === 'hi' ? 'नाश्ता' : 'Breakfast'}
+                  recipe={dayMenu.breakfast}
+                  locale={locale}
+                  onClick={() => openYouTube(dayMenu.breakfast.youtubeId)}
+                />
+                
+                {/* Lunch */}
+                <MiniMealCard 
+                  emoji="☀️"
+                  label={locale === 'hi' ? 'लंच' : 'Lunch'}
+                  recipe={dayMenu.lunch}
+                  locale={locale}
+                  onClick={() => openYouTube(dayMenu.lunch.youtubeId)}
+                />
+                
+                {/* Dinner */}
+                {dayMenu.dinner ? (
+                  <MiniMealCard 
+                    emoji="🌙"
+                    label={locale === 'hi' ? 'डिनर' : 'Dinner'}
+                    recipe={dayMenu.dinner}
+                    locale={locale}
+                    onClick={() => dayMenu.dinner && openYouTube(dayMenu.dinner.youtubeId)}
+                  />
+                ) : (
+                  <div className="bg-gray-100 dark:bg-gray-700 rounded-xl p-3 flex items-center justify-center text-gray-400 dark:text-gray-500 text-sm">
+                    🌙 {locale === 'hi' ? 'कोई डिनर नहीं' : 'No dinner'}
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// Mini Meal Card for the 14-day view
+function MiniMealCard({ 
+  emoji, 
+  label, 
+  recipe, 
+  locale, 
+  onClick 
+}: { 
+  emoji: string; 
+  label: string; 
+  recipe: Recipe; 
+  locale: Locale;
+  onClick: () => void;
+}) {
+  return (
+    <div 
+      onClick={onClick}
+      className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-3 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600/50 transition-colors"
+    >
+      <div className="flex items-center gap-2 mb-1">
+        <span className="text-sm">{emoji}</span>
+        <span className="text-xs text-gray-500 dark:text-gray-400">{label}</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <span className="text-xl">{recipe.emoji}</span>
+        <div className="flex-1 min-w-0">
+          <p className="font-medium text-gray-800 dark:text-white text-sm truncate">
+            {locale === 'hi' ? recipe.nameHi : recipe.name}
+          </p>
+          <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+            <span>💪 {recipe.protein}g</span>
+            <span>⏱️ {recipe.prepTime}m</span>
+            {recipe.prep && <span className="text-orange-500">⚠️</span>}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
