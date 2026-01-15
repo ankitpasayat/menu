@@ -49,15 +49,68 @@ On your phone:
 2. Tap "Add to Home Screen"
 3. Done! Works like a native app 🎉
 
+## � Customizing Recipes
+
+All recipes are stored in a single config file that you can easily edit:
+
+**Edit:** [`config/recipes.json`](config/recipes.json)
+
+### Recipe Structure
+
+Each day has breakfast, lunch, and optionally dinner:
+
+```json
+{
+  "day": 1,
+  "dayName": "Monday",
+  "breakfast": {
+    "name": "Egg Bhurji + Roti",
+    "nameHi": "अंडा भुर्जी रोटी",
+    "emoji": "🥚",
+    "youtubeId": "dPAPY2Jl0mE",
+    "protein": 28,
+    "calories": 380,
+    "prepTime": 15,
+    "equipment": "stove",
+    "prep": {
+      "when": "morning",
+      "taskEn": "Marinate chicken",
+      "taskHi": "चिकन मैरिनेट करें"
+    }
+  }
+}
+```
+
+### Fields explained:
+
+| Field | Description |
+|-------|-------------|
+| `name` | Recipe name in English |
+| `nameHi` | Recipe name in Hindi |
+| `emoji` | Food emoji for the card |
+| `youtubeId` | YouTube video ID (the part after `v=` in the URL) |
+| `protein` | Protein in grams |
+| `calories` | Calories per serving |
+| `prepTime` | Cooking time in minutes |
+| `equipment` | `stove`, `airfryer`, `microwave`, or `no-cook` |
+| `prep` | (Optional) Prep instructions |
+| `prep.when` | `night-before`, `morning`, or `advance` |
+
+### Adding a new recipe
+
+Just add a new day object to the `days` array. Sundays should not have a `dinner` field.
+
 ## 🗂️ Project structure
 
 ```
+config/
+  recipes.json    # ⭐ Edit this to change recipes!
 app/
   page.tsx        # Main app UI
   layout.tsx      # Root layout
   globals.css     # Styles
 lib/
-  recipes.ts      # All 14 days of recipes
+  recipes.ts      # Recipe types & utilities
   i18n.ts         # Hindi/English translations
 public/
   manifest.json   # PWA manifest

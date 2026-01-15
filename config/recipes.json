@@ -1,0 +1,553 @@
+{
+  "meta": {
+    "description": "14-day rotating high-protein meal plan for muscle gain + fat loss",
+    "target": "~1800-2000 cal/day, 140-160g protein",
+    "profile": "172cm, 100kg, sedentary - recomp goal",
+    "equipment": ["Stove", "Microwave", "Air Fryer"],
+    "proteinSources": ["Chicken", "Eggs", "Paneer", "Legumes", "Soya"],
+    "notes": "Sundays have no dinner (only breakfast & lunch)"
+  },
+  "days": [
+    {
+      "day": 1,
+      "dayName": "Monday",
+      "breakfast": {
+        "name": "Egg Bhurji + Roti",
+        "nameHi": "अंडा भुर्जी रोटी",
+        "emoji": "🥚",
+        "youtubeId": "dPAPY2Jl0mE",
+        "protein": 28,
+        "calories": 380,
+        "prepTime": 15,
+        "equipment": "stove"
+      },
+      "lunch": {
+        "name": "Chicken Curry + Rice",
+        "nameHi": "चिकन करी चावल",
+        "emoji": "🍗",
+        "youtubeId": "yZiLBN8p6N8",
+        "protein": 45,
+        "calories": 520,
+        "prepTime": 40,
+        "equipment": "stove",
+        "prep": {
+          "when": "morning",
+          "taskEn": "Marinate chicken with yogurt & spices",
+          "taskHi": "चिकन को दही और मसालों में मैरिनेट करें"
+        }
+      },
+      "dinner": {
+        "name": "Paneer Tikka (Air Fryer)",
+        "nameHi": "पनीर टिक्का",
+        "emoji": "🧀",
+        "youtubeId": "HlVWKSviLhA",
+        "protein": 32,
+        "calories": 350,
+        "prepTime": 25,
+        "equipment": "airfryer",
+        "prep": {
+          "when": "morning",
+          "taskEn": "Marinate paneer cubes",
+          "taskHi": "पनीर को मैरिनेट करें"
+        }
+      }
+    },
+    {
+      "day": 2,
+      "dayName": "Tuesday",
+      "breakfast": {
+        "name": "Greek Yogurt Bowl + Nuts",
+        "nameHi": "दही बाउल और मेवे",
+        "emoji": "🥛",
+        "youtubeId": "kCHHGgT1jJ4",
+        "protein": 25,
+        "calories": 320,
+        "prepTime": 5,
+        "equipment": "no-cook"
+      },
+      "lunch": {
+        "name": "Chicken Do Pyaza",
+        "nameHi": "चिकन दो प्याज़ा",
+        "emoji": "🍗",
+        "youtubeId": "a2bKX1LQXM4",
+        "protein": 42,
+        "calories": 450,
+        "prepTime": 35,
+        "equipment": "stove"
+      },
+      "dinner": {
+        "name": "Egg Curry + Roti",
+        "nameHi": "अंडा करी रोटी",
+        "emoji": "🥚",
+        "youtubeId": "bCBj9bMJD6c",
+        "protein": 28,
+        "calories": 380,
+        "prepTime": 25,
+        "equipment": "stove"
+      }
+    },
+    {
+      "day": 3,
+      "dayName": "Wednesday",
+      "breakfast": {
+        "name": "Masala Omelette + Toast",
+        "nameHi": "मसाला आमलेट टोस्ट",
+        "emoji": "🍳",
+        "youtubeId": "8EZW6lCVcEQ",
+        "protein": 26,
+        "calories": 350,
+        "prepTime": 12,
+        "equipment": "stove"
+      },
+      "lunch": {
+        "name": "Chicken Fried Rice",
+        "nameHi": "चिकन फ्राइड राइस",
+        "emoji": "🍚",
+        "youtubeId": "JvZpnujxMo4",
+        "protein": 38,
+        "calories": 520,
+        "prepTime": 25,
+        "equipment": "stove",
+        "prep": {
+          "when": "morning",
+          "taskEn": "Cook rice and cool it completely",
+          "taskHi": "चावल पका कर पूरी तरह ठंडा करें"
+        }
+      },
+      "dinner": {
+        "name": "Tandoori Chicken (Air Fryer)",
+        "nameHi": "तंदूरी चिकन",
+        "emoji": "🍗",
+        "youtubeId": "m9hLOvnqPZ0",
+        "protein": 52,
+        "calories": 320,
+        "prepTime": 35,
+        "equipment": "airfryer",
+        "prep": {
+          "when": "night-before",
+          "taskEn": "Marinate chicken overnight",
+          "taskHi": "चिकन को रात भर मैरिनेट करें"
+        }
+      }
+    },
+    {
+      "day": 4,
+      "dayName": "Thursday",
+      "breakfast": {
+        "name": "Moong Dal Chilla",
+        "nameHi": "मूंग दाल चीला",
+        "emoji": "🥞",
+        "youtubeId": "5vXU6SCIwA0",
+        "protein": 22,
+        "calories": 280,
+        "prepTime": 20,
+        "equipment": "stove",
+        "prep": {
+          "when": "night-before",
+          "taskEn": "Soak moong dal overnight",
+          "taskHi": "मूंग दाल रात भर भिगोएं"
+        }
+      },
+      "lunch": {
+        "name": "Rajma Chawal",
+        "nameHi": "राजमा चावल",
+        "emoji": "🫘",
+        "youtubeId": "Xs_wJc-eeEA",
+        "protein": 26,
+        "calories": 450,
+        "prepTime": 45,
+        "equipment": "stove",
+        "prep": {
+          "when": "night-before",
+          "taskEn": "Soak rajma overnight (8-10 hrs)",
+          "taskHi": "राजमा रात भर भिगोएं (8-10 घंटे)"
+        }
+      },
+      "dinner": {
+        "name": "Chicken Keema",
+        "nameHi": "चिकन कीमा",
+        "emoji": "🍖",
+        "youtubeId": "Tc5sPBdvKQE",
+        "protein": 48,
+        "calories": 380,
+        "prepTime": 30,
+        "equipment": "stove"
+      }
+    },
+    {
+      "day": 5,
+      "dayName": "Friday",
+      "breakfast": {
+        "name": "Besan Chilla + Chutney",
+        "nameHi": "बेसन चीला चटनी",
+        "emoji": "🥞",
+        "youtubeId": "bDLsIOQvXYs",
+        "protein": 20,
+        "calories": 260,
+        "prepTime": 15,
+        "equipment": "stove"
+      },
+      "lunch": {
+        "name": "Chicken Chowmein",
+        "nameHi": "चिकन चाउमीन",
+        "emoji": "🍜",
+        "youtubeId": "JxRAamwczKY",
+        "protein": 38,
+        "calories": 450,
+        "prepTime": 25,
+        "equipment": "stove"
+      },
+      "dinner": {
+        "name": "Palak Paneer + Roti",
+        "nameHi": "पालक पनीर रोटी",
+        "emoji": "🥬",
+        "youtubeId": "2hEMVNXdxrY",
+        "protein": 30,
+        "calories": 420,
+        "prepTime": 30,
+        "equipment": "stove"
+      }
+    },
+    {
+      "day": 6,
+      "dayName": "Saturday",
+      "breakfast": {
+        "name": "Bread Omelette",
+        "nameHi": "ब्रेड आमलेट",
+        "emoji": "🍳",
+        "youtubeId": "0pnXwuFbMQM",
+        "protein": 26,
+        "calories": 380,
+        "prepTime": 12,
+        "equipment": "stove"
+      },
+      "lunch": {
+        "name": "Chicken Stir Fry + Rice",
+        "nameHi": "चिकन स्टर फ्राई चावल",
+        "emoji": "🍗",
+        "youtubeId": "AqJvgp3HfJQ",
+        "protein": 42,
+        "calories": 480,
+        "prepTime": 25,
+        "equipment": "stove"
+      },
+      "dinner": {
+        "name": "Soya Chunk Curry",
+        "nameHi": "सोया चंक करी",
+        "emoji": "🫘",
+        "youtubeId": "j71F-QLyvVs",
+        "protein": 38,
+        "calories": 320,
+        "prepTime": 25,
+        "equipment": "stove",
+        "prep": {
+          "when": "morning",
+          "taskEn": "Soak soya chunks in hot water 15 mins",
+          "taskHi": "सोया चंक्स गरम पानी में 15 मिनट भिगोएं"
+        }
+      }
+    },
+    {
+      "day": 7,
+      "dayName": "Sunday",
+      "breakfast": {
+        "name": "Protein Pancakes",
+        "nameHi": "प्रोटीन पैनकेक",
+        "emoji": "🥞",
+        "youtubeId": "ZUPfPNKzKCM",
+        "protein": 35,
+        "calories": 420,
+        "prepTime": 20,
+        "equipment": "stove"
+      },
+      "lunch": {
+        "name": "Chicken Biryani",
+        "nameHi": "चिकन बिरयानी",
+        "emoji": "🍚",
+        "youtubeId": "fXxBMrpFDKw",
+        "protein": 45,
+        "calories": 580,
+        "prepTime": 50,
+        "equipment": "stove",
+        "prep": {
+          "when": "night-before",
+          "taskEn": "Marinate chicken, soak rice",
+          "taskHi": "चिकन मैरिनेट करें, चावल भिगोएं"
+        }
+      }
+    },
+    {
+      "day": 8,
+      "dayName": "Monday",
+      "breakfast": {
+        "name": "Protein Oats + Banana",
+        "nameHi": "प्रोटीन ओट्स केला",
+        "emoji": "🥣",
+        "youtubeId": "6MNx5ZKkV2E",
+        "protein": 32,
+        "calories": 380,
+        "prepTime": 10,
+        "equipment": "microwave"
+      },
+      "lunch": {
+        "name": "Chole + Roti",
+        "nameHi": "छोले रोटी",
+        "emoji": "🫘",
+        "youtubeId": "qQ8u13y4DOs",
+        "protein": 24,
+        "calories": 420,
+        "prepTime": 40,
+        "equipment": "stove",
+        "prep": {
+          "when": "night-before",
+          "taskEn": "Soak chickpeas overnight",
+          "taskHi": "छोले रात भर भिगोएं"
+        }
+      },
+      "dinner": {
+        "name": "Grilled Chicken Breast",
+        "nameHi": "ग्रिल्ड चिकन ब्रेस्ट",
+        "emoji": "🍗",
+        "youtubeId": "6TH17gvp3gY",
+        "protein": 55,
+        "calories": 320,
+        "prepTime": 25,
+        "equipment": "airfryer",
+        "prep": {
+          "when": "morning",
+          "taskEn": "Marinate chicken with herbs",
+          "taskHi": "जड़ी-बूटियों में चिकन मैरिनेट करें"
+        }
+      }
+    },
+    {
+      "day": 9,
+      "dayName": "Tuesday",
+      "breakfast": {
+        "name": "Egg Dosa",
+        "nameHi": "एग डोसा",
+        "emoji": "🥚",
+        "youtubeId": "CRu7AIj90HE",
+        "protein": 24,
+        "calories": 320,
+        "prepTime": 20,
+        "equipment": "stove"
+      },
+      "lunch": {
+        "name": "Egg Biryani",
+        "nameHi": "एग बिरयानी",
+        "emoji": "🍚",
+        "youtubeId": "y7pLu-LmX2U",
+        "protein": 28,
+        "calories": 480,
+        "prepTime": 45,
+        "equipment": "stove",
+        "prep": {
+          "when": "morning",
+          "taskEn": "Soak rice for 30 mins",
+          "taskHi": "चावल 30 मिनट भिगोएं"
+        }
+      },
+      "dinner": {
+        "name": "Indian Chicken Pasta",
+        "nameHi": "इंडियन चिकन पास्ता",
+        "emoji": "🍝",
+        "youtubeId": "Lm00mJCu2ko",
+        "protein": 40,
+        "calories": 480,
+        "prepTime": 25,
+        "equipment": "stove"
+      }
+    },
+    {
+      "day": 10,
+      "dayName": "Wednesday",
+      "breakfast": {
+        "name": "Oats Chilla",
+        "nameHi": "ओट्स चीला",
+        "emoji": "🥞",
+        "youtubeId": "VEpCMAxYKl0",
+        "protein": 18,
+        "calories": 280,
+        "prepTime": 15,
+        "equipment": "stove"
+      },
+      "lunch": {
+        "name": "Butter Chicken + Rice",
+        "nameHi": "बटर चिकन चावल",
+        "emoji": "🍗",
+        "youtubeId": "H0GhcOj3GJA",
+        "protein": 45,
+        "calories": 520,
+        "prepTime": 40,
+        "equipment": "stove",
+        "prep": {
+          "when": "night-before",
+          "taskEn": "Marinate chicken overnight",
+          "taskHi": "चिकन रात भर मैरिनेट करें"
+        }
+      },
+      "dinner": {
+        "name": "Paneer Bhurji + Roti",
+        "nameHi": "पनीर भुर्जी रोटी",
+        "emoji": "🧀",
+        "youtubeId": "RJq7MVZbv9I",
+        "protein": 32,
+        "calories": 380,
+        "prepTime": 20,
+        "equipment": "stove"
+      }
+    },
+    {
+      "day": 11,
+      "dayName": "Thursday",
+      "breakfast": {
+        "name": "Boiled Eggs + Multigrain Toast",
+        "nameHi": "उबले अंडे मल्टीग्रेन टोस्ट",
+        "emoji": "🥚",
+        "youtubeId": "IgF0z5VLbqE",
+        "protein": 28,
+        "calories": 320,
+        "prepTime": 10,
+        "equipment": "stove"
+      },
+      "lunch": {
+        "name": "Chicken Pulao",
+        "nameHi": "चिकन पुलाव",
+        "emoji": "🍚",
+        "youtubeId": "LQFJEvH6jN0",
+        "protein": 40,
+        "calories": 480,
+        "prepTime": 40,
+        "equipment": "stove",
+        "prep": {
+          "when": "morning",
+          "taskEn": "Soak rice for 30 mins",
+          "taskHi": "चावल 30 मिनट भिगोएं"
+        }
+      },
+      "dinner": {
+        "name": "Egg Fried Rice",
+        "nameHi": "एग फ्राइड राइस",
+        "emoji": "🍳",
+        "youtubeId": "Y-yKaffBPBI",
+        "protein": 24,
+        "calories": 420,
+        "prepTime": 15,
+        "equipment": "stove"
+      }
+    },
+    {
+      "day": 12,
+      "dayName": "Friday",
+      "breakfast": {
+        "name": "Sprouts + Egg Salad",
+        "nameHi": "स्प्राउट्स एग सलाद",
+        "emoji": "🥗",
+        "youtubeId": "BbhRsNu1t9Y",
+        "protein": 26,
+        "calories": 280,
+        "prepTime": 10,
+        "equipment": "no-cook",
+        "prep": {
+          "when": "night-before",
+          "taskEn": "Sprout moong overnight",
+          "taskHi": "मूंग रात भर अंकुरित करें"
+        }
+      },
+      "lunch": {
+        "name": "Dal Makhani + Rice",
+        "nameHi": "दाल मखनी चावल",
+        "emoji": "🥣",
+        "youtubeId": "p6__J7dGjzQ",
+        "protein": 22,
+        "calories": 450,
+        "prepTime": 45,
+        "equipment": "stove",
+        "prep": {
+          "when": "night-before",
+          "taskEn": "Soak dal overnight",
+          "taskHi": "दाल रात भर भिगोएं"
+        }
+      },
+      "dinner": {
+        "name": "Chicken Tikka (Air Fryer)",
+        "nameHi": "चिकन टिक्का",
+        "emoji": "🍗",
+        "youtubeId": "M0j68pSgHJA",
+        "protein": 52,
+        "calories": 320,
+        "prepTime": 30,
+        "equipment": "airfryer",
+        "prep": {
+          "when": "morning",
+          "taskEn": "Marinate chicken",
+          "taskHi": "चिकन मैरिनेट करें"
+        }
+      }
+    },
+    {
+      "day": 13,
+      "dayName": "Saturday",
+      "breakfast": {
+        "name": "Egg Paratha",
+        "nameHi": "एग पराठा",
+        "emoji": "🥚",
+        "youtubeId": "x9Q8aJfMbmQ",
+        "protein": 24,
+        "calories": 380,
+        "prepTime": 20,
+        "equipment": "stove"
+      },
+      "lunch": {
+        "name": "Masala Chicken Fry (Air Fryer)",
+        "nameHi": "मसाला चिकन फ्राई",
+        "emoji": "🍗",
+        "youtubeId": "sMjoxWLfBTY",
+        "protein": 48,
+        "calories": 380,
+        "prepTime": 30,
+        "equipment": "airfryer",
+        "prep": {
+          "when": "night-before",
+          "taskEn": "Marinate chicken overnight",
+          "taskHi": "चिकन रात भर मैरिनेट करें"
+        }
+      },
+      "dinner": {
+        "name": "Kadhi Pakora + Rice",
+        "nameHi": "कढ़ी पकोड़ा चावल",
+        "emoji": "🥣",
+        "youtubeId": "kGKx0y7q3Ls",
+        "protein": 20,
+        "calories": 420,
+        "prepTime": 35,
+        "equipment": "stove"
+      }
+    },
+    {
+      "day": 14,
+      "dayName": "Sunday",
+      "breakfast": {
+        "name": "Egg Bhurji Toast",
+        "nameHi": "एग भुर्जी टोस्ट",
+        "emoji": "🍳",
+        "youtubeId": "zC2yhhWmYPY",
+        "protein": 26,
+        "calories": 380,
+        "prepTime": 15,
+        "equipment": "stove"
+      },
+      "lunch": {
+        "name": "Chicken Noodles (Hakka Style)",
+        "nameHi": "चिकन नूडल्स हक्का",
+        "emoji": "🍜",
+        "youtubeId": "DQE8HqTxqSc",
+        "protein": 42,
+        "calories": 520,
+        "prepTime": 30,
+        "equipment": "stove"
+      }
+    }
+  ]
+}
